@@ -1,0 +1,107 @@
+.div1 {
+	
+    width:250px;  /* Tamanho final do select */
+    overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */
+}
+  
+.div1 select {
+	cursor: pointer;
+      background-color: #002e51;
+      background-position: 205px center;  /*Posição da imagem do background*/
+      width: 100%; /* Tamanho do select, maior que o tamanho da div "div-select" */
+      height:48px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+      font-family:Arial, Helvetica, sans-serif; /* Fonte do Select */
+      font-size:18px; /* Tamanho da Fonte */
+      border: none;
+      padding:13px 20px 13px 12px; /* Configurações de padding para posicionar o texto no campo */
+      color:#fff; /* Cor da Fonte */
+      text-indent: 0.01px; /* Remove seta padrão do FireFox */
+      text-overflow: "";  /* Remove seta padrão do FireFox */     
+      select:-ms-expand {display: none;} /* Remove seta padrão do IE*/
+      
+  
+}
+.div2 {
+    width:100%;  /* Tamanho final do select */
+    overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */
+}
+  
+.div2 select {
+	cursor: pointer;
+      background-color: #16aa56;
+      background-position: 205px center;  /*Posição da imagem do background*/
+      width: 100%; /* Tamanho do select, maior que o tamanho da div "div-select" */
+      height:48px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+      font-family:Arial, Helvetica, sans-serif; /* Fonte do Select */
+      border: none;
+      font-size:18px; /* Tamanho da Fonte */
+      padding:13px 20px 13px 12px; /* Configurações de padding para posicionar o texto no campo */
+      color:#fff; /* Cor da Fonte */
+      text-indent: 0.01px; /* Remove seta padrão do FireFox */
+      text-overflow: "";  /* Remove seta padrão do FireFox */     
+      select::-ms-expand {display: none;} /* Remove seta padrão do IE*/
+  
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box
+}
+
+/* Esconder no IE 10 */
+select::-ms-expand {
+  display: none 
+}
+
+/* Outros navegadores */
+select {
+  -webkit-appearance: none;
+          appearance: none
+}
+
+select:focus {
+  outline: none;
+}
+
+/* Caixa em volta do select */
+.select {
+  position: relative;
+  width: 500px;
+  z-index: 1
+}
+
+/* A seta */
+.select:before { 
+  display: block;
+  font-family: 'FontAwesome';
+  height: 100%;
+  position: absolute;
+  top: 0; right: 0;
+  width: 1em;
+  z-index: -1
+}
+
+.select > select {
+  display: block;
+  margin: 0;
+  padding: .5em;
+  width: 100%;
+}
+
+/**
+ * Pseudo-class 'any', referência:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/:any */
+:-moz-any(.select):before {
+  background-color: #fff;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**
+ * O código abaixo não tem relevância, o único propósito
+ * é tornar o exemplo 'apresentável' esteticamente. */
+.select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 0 0 2em;
+  padding: 0;
+}

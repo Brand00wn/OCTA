@@ -1,0 +1,23 @@
+.div1 {
+	
+    width:250px;  /* Tamanho final do select */
+    overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */
+}
+  
+.div1 select {
+	cursor: pointer;
+      background-color: #00538c;
+      background-position: 205px center;  /*Posição da imagem do background*/
+      width: 100%; /* Tamanho do select, maior que o tamanho da div "div-select" */
+      height:48px; /* altura do select, importante para que tenha a mesma altura em todo os navegadores */
+      font-family:Arial, Helvetica, sans-serif; /* Fonte do Select */
+      font-size:18px; /* Tamanho da Fonte */
+      border: none;
+      padding:13px 20px 13px 12px; /* Configurações de padding para posicionar o texto no campo */
+      color:#fff; /* Cor da Fonte */
+      text-indent: 0.01px; /* Remove seta padrão do FireFox */
+      text-overflow: "";  /* Remove seta padrão do FireFox */     
+      select:-ms-expand {display: none;} /* Remove seta padrão do IE*/
+      
+  
+}
